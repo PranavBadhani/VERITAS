@@ -1,0 +1,89 @@
+body {
+    background-color: #f8fafc;
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #475569;
+    padding: 40px 20px;
+    margin: 0;
+}
+
+.dashboard {
+    max-width: 1100px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.header { text-align: center; margin-bottom: 25px; }
+.header h1 { color: #1e293b; margin: 0; font-size: 2.2em; }
+.header p { color: #94a3b8; margin: 5px 0; }
+
+.info-banner {
+    background: #f1f5f9;
+    border-left: 4px solid #a5cbd3;
+    border-right: 4px solid #a5cbd3;
+    padding: 12px 20px;
+    font-size: 0.9em;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.file-bar { display: flex; align-items: center; gap: 15px; margin-bottom: 10px; }
+#filename { font-size: 0.9em; color: #64748b; }
+
+#code-preview {
+    background: #fbfcfd;
+    border: 1px solid #e2e8f0;
+    padding: 15px;
+    border-radius: 8px;
+    height: 180px;
+    overflow-y: auto;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85em;
+}
+
+.results-grid {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.compiler-card {
+    flex: 1;
+    border: 1px solid #e2e8f0;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.card-head h3 { margin: 0; font-size: 1.1em; color: #334155; }
+
+.msg { font-size: 0.85em; color: #64748b; min-height: 35px; }
+
+.display-box {
+    background: #f8fafc;
+    border: 1px solid #f1f5f9;
+    border-radius: 6px;
+    padding: 12px;
+    min-height: 180px;
+    font-size: 0.9em;
+    overflow-y: auto;
+}
+
+
+
+.action-bar { text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #f1f5f9; }
+
+.btn-secondary { background: #e2e8f0; color: #475569; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 0.8em; font-weight: 600; }
+.btn-primary { background: #384959; color: white; border: none; padding: 15px 40px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.2s; }
+.btn-primary:disabled { background: #cbd5e1; cursor: not-allowed; }
+.btn-primary:hover:not(:disabled) { background: #2c3a47; }
+
+.badge { font-size: 0.75em; padding: 4px 8px; border-radius: 4px; background: #f1f5f9; font-weight: bold; }
+.bg-green { background: #dcfce7; color: #166534; }
+.bg-red { background: #fee2e2; color: #991b1b; }
+
+.vuln { background: #fff5f5; border-left: 3px solid #f87171; padding: 8px; margin-bottom: 8px; font-size: 0.85em; }

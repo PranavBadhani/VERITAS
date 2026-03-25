@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VERITAS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+    <div class="header">
+        <h1>VERITAS</h1>
+    </div>
+
+    <div class="info-banner">
+        Veritas checks for <strong>Buffer Overflow, Format String, Use-After-Free, Integer Overflow, Memory Scrubbing</strong> vulnerabilities present in the source code and provides detailed reports on potential security issues.
+    </div>
+
+    <div class="input-area">
+        <div class="file-bar">
+            <input type="file" id="file-input" accept=".c" style="display: none;">
+            <label for="file-input" class="btn-secondary">BROWSE FILE</label>
+            <span id="filename">No file selected</span>
+        </div>
+        <pre id="code-preview">Select a file</pre>
+    </div>
+
+    <div class="results-grid">
+        <div class="compiler-card">
+            <div class="card-head">
+                <h3>GCC Compiler</h3>
+            </div>
+            <p id="gcc-msg" class="msg">Waiting for source code...</p>
+            <div class="display-box terminal" id="gcc-out"></div>
+        </div>
+
+        <div class="compiler-card">
+            <div class="card-head">
+                <h3>Safe State Compiler</h3>
+            </div>
+            <p id="veritas-msg" class="msg">Waiting for source code...</p>
+            <div class="display-box" id="veritas-out">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="action-bar">
+        <button id="run-btn" class="btn-primary" onclick="runPipeline()" disabled>RUN ANALYSIS</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
