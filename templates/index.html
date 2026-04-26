@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veritas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>VERITAS</h1>
+            <p>Veritas checks for Buffer Overflow, Format String, Use-After-Free, Integer Overflow, Memory Scrubbing vulnerabilities present in the source code and provides detailed reports on potential security issues.</p>
+        </header>
+
+        <div class="controls-wrapper">
+            <div class="control-panel">
+                <input type="file" id="file-upload" accept=".c" style="width: 100%;">
+            </div>
+            <div class="control-panel">
+                <button id="compile-btn" class="primary-btn" style="width: 100%;">Compile Code</button>
+            </div>
+        </div>
+
+        <div class="workspace">
+            <div class="panel code-panel">
+                <h2>Source Code (.c)</h2>
+                <div class="editor-wrapper">
+                    <div class="line-numbers" id="line-numbers">1</div>
+                    <textarea id="code-editor" spellcheck="false" placeholder="// Select a file or write C code here..." wrap="off"></textarea>
+                </div>
+            </div>
+
+            <div class="panel results-panel">
+                <div class="terminal-container">
+                    <h2><span class="indicator gcc"></span> GCC Compiler Output</h2>
+                    <pre id="gcc-output" class="terminal">// Standard GCC output will appear here...</pre>
+                </div>
+
+                <div class="terminal-container">
+                    <h2><span class="indicator mini"></span> Veritas Compiler Output</h2>
+                    <pre id="mini-output" class="terminal">// Secure Veritas Compiler output will appear here...</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

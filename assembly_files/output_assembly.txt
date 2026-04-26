@@ -1,0 +1,9 @@
+.text
+.global _start
+_start:
+  MOV x, 2000000000
+  MOV y, 2000000000
+  MOV t1, x
+  ADD t1, y
+  MOV z, t1
+  EXIT
